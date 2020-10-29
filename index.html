@@ -11,21 +11,26 @@
 </head>
 <body>
 <div class="wrapper">
-<header>
-       <a href="index.html"><img src="assets/img/logo.svg" alt="Logo" class="logo"></a>
-       <input type="search" class="input search-input" placeholder="Адрес доставки">
+    <header>
+        <a href="index.html"><img src="assets/img/logo.svg" alt="Logo" class="logo"></a>
+        <input type="search" class="input search-input" placeholder="Адрес доставки">
         <div class="buttons">
-            <button class="button button-primary">
+            <span class="user-name"></span>
+            <button class="button button-primary auth-button">
                 <img src="assets/img/icons/user.svg" alt="user" class="button-icon">
                 <span class="button-text">Войти</span>
             </button>
-            <button class="button">
+            <button class="button" id="cart-button">
                 <img src="assets/img/icons/shopping-cart.svg" alt="user" class="button-icon">
                 <span class="button-text">Корзина</span>
             </button>
+            <button class="button button-primary button-out">
+                <span class="button-text">Выйти</span>
+                <span class="button-out-svg"></span>
+            </button>
         </div>
-</header>
-<section class="promo">
+    </header>
+<section class="promo container-promo">
     <div class="promo-text">
         <h1 class="text-big">Онлайн-сервис<br> достави еды на дом</h1>
         <p class="text-medium">Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком</p>
@@ -38,182 +43,430 @@
     </div>
     <div class="resto-select_bottom">
         <!--        NEXT ONE  CARD         -->
-        <div class="resto-card">
-            <img src="assets/img/food/pizza1.png" alt="" class="resto_img">
-            <div class="card-info">
-                <div class="card-info_top">
-                    <span class="text-medium">
-                        Пицца минус
-                    </span>
-                    <span class="card_info_time">
-                        50 мин
-                    </span>
-                </div>
-                <div class="card-info_bottom">
-                    <span class="card_info-star">
-                        <img src="assets/img/icons/star.svg" alt="star">
-                        <span class="star_yellow">5</span>
-                    </span>
-                    <span>
-                        От 150 грн
-                    </span>
-                    <span class="card-info-ellipse">
-                        <img src="assets/img/icons/ellipse.svg" alt="">
-                    </span>
-                    <span class="category">
-                        Пицца
-                    </span>
-                </div>
-            </div>
-        </div>
-        <!--        NEXT ONE  CARD         -->
-        <a href="restaurant.html" class="resto-card">
-            <img src="assets/img/food/jap1.png" alt="" class="resto_img">
-            <div class="card-info">
-                <div class="card-info_top">
-                    <span class="text-medium">
-                        Якитория
-                    </span>
-                    <span class="card_info_time">
-                        120 мин
-                    </span>
-                </div>
-                <div class="card-info_bottom">
-                    <span class="card_info-star">
-                        <img src="assets/img/icons/star.svg" alt="star">
-                        <span class="star_yellow">3</span>
-                    </span>
-                    <span>
-                        От 1150 грн
-                    </span>
-                    <span class="card-info-ellipse">
-                        <img src="assets/img/icons/ellipse.svg" alt="">
-                    </span>
-                    <span class="category">
-                        Суши
-                    </span>
-                </div>
-            </div>
-        </a>
-        <!--        NEXT ONE  CARD         -->
-        <div class="resto-card">
-            <img src="assets/img/food/all.png" alt="" class="resto_img">
-            <div class="card-info">
-                <div class="card-info_top">
-                    <span class="text-medium">
-                        Пицца минус
-                    </span>
-                    <span class="card_info_time">
-                        50 мин
-                    </span>
-                </div>
-                <div class="card-info_bottom">
-                    <span class="card_info-star">
-                        <img src="assets/img/icons/star.svg" alt="star">
-                        <span class="star_yellow">5</span>
-                    </span>
-                    <span>
-                        От 150 грн
-                    </span>
-                    <span class="card-info-ellipse">
-                        <img src="assets/img/icons/ellipse.svg" alt="">
-                    </span>
-                    <span class="category">
-                        Пицца
-                    </span>
-                </div>
-            </div>
-        </div>
-        <!--        NEXT ONE  CARD         -->
-        <div class="resto-card">
-            <img src="assets/img/food/jap2.png" alt="" class="resto_img">
-            <div class="card-info">
-                <div class="card-info_top">
-                    <span class="text-medium">
-                        Пицца минус
-                    </span>
-                    <span class="card_info_time">
-                        50 мин
-                    </span>
-                </div>
-                <div class="card-info_bottom">
-                    <span class="card_info-star">
-                        <img src="assets/img/icons/star.svg" alt="star">
-                        <span class="star_yellow">5</span>
-                    </span>
-                    <span>
-                        От 150грн
-                    </span>
-                    <span class="card-info-ellipse">
-                        <img src="assets/img/icons/ellipse.svg" alt="">
-                    </span>
-                    <span class="category">
-                        Пицца
-                    </span>
-                </div>
-            </div>
-        </div>
-        <!--        NEXT ONE  CARD         -->
-        <div class="resto-card">
-            <img src="assets/img/food/pizza2.png" alt="" class="resto_img">
-            <div class="card-info">
-                <div class="card-info_top">
-                    <span class="text-medium">
-                        Пицца минус
-                    </span>
-                    <span class="card_info_time">
-                        50 мин
-                    </span>
-                </div>
-                <div class="card-info_bottom">
-                    <span class="card_info-star">
-                        <img src="assets/img/icons/star.svg" alt="star">
-                        <span class="star_yellow">5</span>
-                    </span>
-                    <span>
-                        От 150грн
-                    </span>
-                    <span class="card-info-ellipse">
-                        <img src="assets/img/icons/ellipse.svg" alt="">
-                    </span>
-                    <span class="category">
-                        Пицца
-                    </span>
-                </div>
-            </div>
-        </div>
-        <!--        NEXT ONE  CARD         -->
-        <div class="resto-card">
-            <img src="assets/img/food/pizza3.png" alt="" class="resto_img">
-            <div class="card-info">
-                <div class="card-info_top">
-                    <span class="text-medium">
-                        Пицца минус
-                    </span>
-                    <span class="card_info_time">
-                        50 мин
-                    </span>
-                </div>
-                <div class="card-info_bottom">
-                    <span class="card_info-star">
-                        <img src="assets/img/icons/star.svg" alt="star">
-                        <span class="star_yellow">5</span>
-                    </span>
-                    <span>
-                        От 150грн
-                    </span>
-                    <span class="card-info-ellipse">
-                        <img src="assets/img/icons/ellipse.svg" alt="">
-                    </span>
-                    <span class="category">
-                        Пицца
-                    </span>
-                </div>
-            </div>
-        </div>
+<!--        <div class="resto-card">-->
+<!--            <img src="assets/img/food/pizza1.png" alt="" class="resto_img">-->
+<!--            <div class="card-info">-->
+<!--                <div class="card-info_top">-->
+<!--                    <span class="text-medium">-->
+<!--                        Пицца минус-->
+<!--                    </span>-->
+<!--                    <span class="card_info_time">-->
+<!--                        50 мин-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="card-info_bottom">-->
+<!--                    <span class="card_info-star">-->
+<!--                        <img src="assets/img/icons/star.svg" alt="star">-->
+<!--                        <span class="star_yellow">5</span>-->
+<!--                    </span>-->
+<!--                    <span>-->
+<!--                        От 150 грн-->
+<!--                    </span>-->
+<!--                    <span class="card-info-ellipse">-->
+<!--                        <img src="assets/img/icons/ellipse.svg" alt="">-->
+<!--                    </span>-->
+<!--                    <span class="category">-->
+<!--                        Пицца-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        NEXT ONE  CARD         &ndash;&gt;-->
+<!--        <a href="restaurant.html" class="resto-card">-->
+<!--            <img src="assets/img/food/jap1.png" alt="" class="resto_img">-->
+<!--            <div class="card-info">-->
+<!--                <div class="card-info_top">-->
+<!--                    <span class="text-medium">-->
+<!--                        Якитория-->
+<!--                    </span>-->
+<!--                    <span class="card_info_time">-->
+<!--                        120 мин-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="card-info_bottom">-->
+<!--                    <span class="card_info-star">-->
+<!--                        <img src="assets/img/icons/star.svg" alt="star">-->
+<!--                        <span class="star_yellow">3</span>-->
+<!--                    </span>-->
+<!--                    <span>-->
+<!--                        От 1150 грн-->
+<!--                    </span>-->
+<!--                    <span class="card-info-ellipse">-->
+<!--                        <img src="assets/img/icons/ellipse.svg" alt="">-->
+<!--                    </span>-->
+<!--                    <span class="category">-->
+<!--                        Суши-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        &lt;!&ndash;        NEXT ONE  CARD         &ndash;&gt;-->
+<!--        <div class="resto-card">-->
+<!--            <img src="assets/img/food/all.png" alt="" class="resto_img">-->
+<!--            <div class="card-info">-->
+<!--                <div class="card-info_top">-->
+<!--                    <span class="text-medium">-->
+<!--                        Пицца минус-->
+<!--                    </span>-->
+<!--                    <span class="card_info_time">-->
+<!--                        50 мин-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="card-info_bottom">-->
+<!--                    <span class="card_info-star">-->
+<!--                        <img src="assets/img/icons/star.svg" alt="star">-->
+<!--                        <span class="star_yellow">5</span>-->
+<!--                    </span>-->
+<!--                    <span>-->
+<!--                        От 150 грн-->
+<!--                    </span>-->
+<!--                    <span class="card-info-ellipse">-->
+<!--                        <img src="assets/img/icons/ellipse.svg" alt="">-->
+<!--                    </span>-->
+<!--                    <span class="category">-->
+<!--                        Пицца-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        NEXT ONE  CARD         &ndash;&gt;-->
+<!--        <div class="resto-card">-->
+<!--            <img src="assets/img/food/jap2.png" alt="" class="resto_img">-->
+<!--            <div class="card-info">-->
+<!--                <div class="card-info_top">-->
+<!--                    <span class="text-medium">-->
+<!--                        Пицца минус-->
+<!--                    </span>-->
+<!--                    <span class="card_info_time">-->
+<!--                        50 мин-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="card-info_bottom">-->
+<!--                    <span class="card_info-star">-->
+<!--                        <img src="assets/img/icons/star.svg" alt="star">-->
+<!--                        <span class="star_yellow">5</span>-->
+<!--                    </span>-->
+<!--                    <span>-->
+<!--                        От 150грн-->
+<!--                    </span>-->
+<!--                    <span class="card-info-ellipse">-->
+<!--                        <img src="assets/img/icons/ellipse.svg" alt="">-->
+<!--                    </span>-->
+<!--                    <span class="category">-->
+<!--                        Пицца-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        NEXT ONE  CARD         &ndash;&gt;-->
+<!--        <div class="resto-card">-->
+<!--            <img src="assets/img/food/pizza2.png" alt="" class="resto_img">-->
+<!--            <div class="card-info">-->
+<!--                <div class="card-info_top">-->
+<!--                    <span class="text-medium">-->
+<!--                        Пицца минус-->
+<!--                    </span>-->
+<!--                    <span class="card_info_time">-->
+<!--                        50 мин-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="card-info_bottom">-->
+<!--                    <span class="card_info-star">-->
+<!--                        <img src="assets/img/icons/star.svg" alt="star">-->
+<!--                        <span class="star_yellow">5</span>-->
+<!--                    </span>-->
+<!--                    <span>-->
+<!--                        От 150грн-->
+<!--                    </span>-->
+<!--                    <span class="card-info-ellipse">-->
+<!--                        <img src="assets/img/icons/ellipse.svg" alt="">-->
+<!--                    </span>-->
+<!--                    <span class="category">-->
+<!--                        Пицца-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        NEXT ONE  CARD         &ndash;&gt;-->
+<!--        <div class="resto-card">-->
+<!--            <img src="assets/img/food/pizza3.png" alt="" class="resto_img">-->
+<!--            <div class="card-info">-->
+<!--                <div class="card-info_top">-->
+<!--                    <span class="text-medium">-->
+<!--                        Пицца минус-->
+<!--                    </span>-->
+<!--                    <span class="card_info_time">-->
+<!--                        50 мин-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <div class="card-info_bottom">-->
+<!--                    <span class="card_info-star">-->
+<!--                        <img src="assets/img/icons/star.svg" alt="star">-->
+<!--                        <span class="star_yellow">5</span>-->
+<!--                    </span>-->
+<!--                    <span>-->
+<!--                        От 150грн-->
+<!--                    </span>-->
+<!--                    <span class="card-info-ellipse">-->
+<!--                        <img src="assets/img/icons/ellipse.svg" alt="">-->
+<!--                    </span>-->
+<!--                    <span class="category">-->
+<!--                        Пицца-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
     </div>
 </section>
+
+    <section class="menu hide">
+        <div class="section-heading">
+            <h2 class="section-title restaurant-title">Пицца Плюс</h2>
+            <div class="card-info">
+                <div class="rating">
+                    4.5
+                </div>
+                <div class="price">От 900 ₽</div>
+                <div class="category">Пицца</div>
+            </div>
+            <!-- /.card-info -->
+        </div>
+        <div class="cards cards-menu">
+<!--            <div class="card">-->
+<!--                <img src="img/pizza-plus/pizza-vesuvius.jpg" alt="image" class="card-image">-->
+<!--                <div class="card-text">-->
+<!--                    <div class="card-heading">-->
+<!--                        <h3 class="card-title card-title-reg">Пицца Везувий</h3>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-heading &ndash;&gt;-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="ingredients">Соус томатный, сыр «Моцарелла», ветчина, пепперони, перец-->
+<!--                            «Халапенье», соус «Тобаско», томаты.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-info &ndash;&gt;-->
+<!--                    <div class="card-buttons">-->
+<!--                        <button class="button button-primary button-add-cart">-->
+<!--                            <span class="button-card-text">В корзину</span>-->
+<!--                            <span class="button-cart-svg"></span>-->
+<!--                        </button>-->
+<!--                        <strong class="card-price-bold">545 ₽</strong>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /.card-text &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.card &ndash;&gt;-->
+
+<!--            <div class="card">-->
+<!--                <img src="img/pizza-plus/pizza-girls.jpg" alt="image" class="card-image">-->
+<!--                <div class="card-text">-->
+<!--                    <div class="card-heading">-->
+<!--                        <h3 class="card-title card-title-reg">Пицца Девичник</h3>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-heading &ndash;&gt;-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="ingredients">Соус томатный, постное тесто, нежирный сыр, кукуруза, лук, маслины,-->
+<!--                            грибы, помидоры, болгарский перец.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-info &ndash;&gt;-->
+<!--                    <div class="card-buttons">-->
+<!--                        <button class="button button-primary button-add-cart">-->
+<!--                            <span class="button-card-text">В корзину</span>-->
+<!--                            <span class="button-cart-svg"></span>-->
+<!--                        </button>-->
+<!--                        <strong class="card-price-bold">450 ₽</strong>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /.card-text &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.card &ndash;&gt;-->
+
+<!--            <div class="card">-->
+<!--                <img src="img/pizza-plus/pizza-oleole.jpg" alt="image" class="card-image">-->
+<!--                <div class="card-text">-->
+<!--                    <div class="card-heading">-->
+<!--                        <h3 class="card-title card-title-reg">Пицца Оле-Оле</h3>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-heading &ndash;&gt;-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="ingredients">Соус томатный, сыр «Моцарелла», черри, маслины, зелень, майонез-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-info &ndash;&gt;-->
+<!--                    <div class="card-buttons">-->
+<!--                        <button class="button button-primary button-add-cart">-->
+<!--                            <span class="button-card-text">В корзину</span>-->
+<!--                            <span class="button-cart-svg"></span>-->
+<!--                        </button>-->
+<!--                        <strong class="card-price-bold">440 ₽</strong>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /.card-text &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.card &ndash;&gt;-->
+
+<!--            <div class="card">-->
+<!--                <img src="img/pizza-plus/pizza-plus.jpg" alt="image" class="card-image">-->
+<!--                <div class="card-text">-->
+<!--                    <div class="card-heading">-->
+<!--                        <h3 class="card-title card-title-reg">Пицца Плюс</h3>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-heading &ndash;&gt;-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="ingredients">Соус томатный, сыр «Моцарелла», сыр «Чеддер», томаты, пепперони,-->
+<!--                            телятина, грибы, бекон, болгарский перец.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-info &ndash;&gt;-->
+<!--                    <div class="card-buttons">-->
+<!--                        <button class="button button-primary button-add-cart">-->
+<!--                            <span class="button-card-text">В корзину</span>-->
+<!--                            <span class="button-cart-svg"></span>-->
+<!--                        </button>-->
+<!--                        <strong class="card-price-bold">805 ₽</strong>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /.card-text &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.card &ndash;&gt;-->
+
+<!--            <div class="card">-->
+<!--                <img src="img/pizza-plus/pizza-hawaiian.jpg" alt="image" class="card-image">-->
+<!--                <div class="card-text">-->
+<!--                    <div class="card-heading">-->
+<!--                        <h3 class="card-title card-title-reg">Пицца Гавайская</h3>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-heading &ndash;&gt;-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="ingredients">Соус томатный, сыр «Моцарелла», ветчина, ананасы</div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-info &ndash;&gt;-->
+<!--                    <div class="card-buttons">-->
+<!--                        <button class="button button-primary button-add-cart">-->
+<!--                            <span class="button-card-text">В корзину</span>-->
+<!--                            <span class="button-cart-svg"></span>-->
+<!--                        </button>-->
+<!--                        <strong class="card-price-bold">440 ₽</strong>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /.card-text &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.card &ndash;&gt;-->
+
+<!--            <div class="card">-->
+<!--                <img src="img/pizza-plus/pizza-classic.jpg" alt="image" class="card-image">-->
+<!--                <div class="card-text">-->
+<!--                    <div class="card-heading">-->
+<!--                        <h3 class="card-title card-title-reg">Пицца Классика</h3>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-heading &ndash;&gt;-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="ingredients">Соус томатный, сыр «Моцарелла», сыр «Пармезан», ветчина, салями,-->
+<!--                            грибы.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; /.card-info &ndash;&gt;-->
+<!--                    <div class="card-buttons">-->
+<!--                        <button class="button button-primary button-add-cart">-->
+<!--                            <span class="button-card-text">В корзину</span>-->
+<!--                            <span class="button-cart-svg"></span>-->
+<!--                        </button>-->
+<!--                        <strong class="card-price-bold">510 ₽</strong>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /.card-text &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.card &ndash;&gt;-->
+        </div>
+        <!-- /.cards -->
+    </section>
+
+
+    <!--    MODAL-->
+
+    <div class="modal">
+        <div class="modal-dialog">
+            <div class="modal-top">
+                <p class="text-big">Корзина</p>
+                <p class="close-button text-big">X</p>
+            </div>
+            <div class="modal-list">
+                <div class="list-item">
+                <span>
+                    Ролл угорь стандарт
+                </span>
+                    <div class="item-price-wrapper">
+                    <span class="item-price">
+                        250 uah
+                    </span>
+                        <div class="quantity">
+                            <span class="amount">-</span>
+                            <span class="number">1</span>
+                            <span class="amount">+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                <span>
+                    Ролл угорь стандарт
+                </span>
+                    <div class="item-price-wrapper">
+                    <span class="item-price">
+                        250 uah
+                    </span>
+                        <div class="quantity">
+                            <span class="amount">-</span>
+                            <span class="number">1</span>
+                            <span class="amount">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bottom">
+            <span class="total-price">
+                666 uah
+            </span>
+                <div class="confirm_wrapper">
+                    <button class="button button-primary">
+                        <span class="button-text">Оформить заказа</span>
+                    </button>
+                    <button class="button">
+                        <span class="button-text">Отмена</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    AUTH-->
+    <div class="modal-auth">
+        <div class="modal-dialog modal-dialog-auth">
+            <button class="close-auth">×</button>
+            <form id="logInForm">
+                <fieldset class="modal-body">
+                    <legend class="modal-title">Авторизация</legend>
+                    <label class="label-auth">
+                        <span>Логин</span>
+                        <input id="login" type="text">
+                    </label>
+                    <label class="label-auth">
+                        <span>Пароль</span>
+                        <input id="password" type="password">
+                    </label>
+                </fieldset>
+                <!-- /.modal-body -->
+                <div class="modal-footer">
+                    <div class="footer-buttons">
+                        <button class="button button-primary button-login" type="submit">Войти</button>
+                    </div>
+                </div>
+            </form>
+            <!-- /.modal-footer -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
 </div>
 <footer>
     <div class="wrapper">
@@ -233,5 +486,8 @@
         </div>
     </div>
 </footer>
+<script src="main.js">
+
+</script>
 </body>
 </html>
