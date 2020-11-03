@@ -18,10 +18,16 @@ const restoSelect = document.querySelector(".resto-select");
 const menu = document.querySelector(".menu");
 const logo = document.querySelectorAll(".logo");
 
-const cardMenu = document.querySelector(".cards-menu")
+const cardMenu = document.querySelector(".cards-menu");
+
+const modalBody = document.querySelector(".modal-list");
+const modalPrice = document.querySelector(".total-price");
+const cancelBtn = document.querySelector('.cancel-btn');
 
 let login = localStorage.getItem('delivery');
 
+
+const cart = [];
 
 const getData = async function(url){
 
@@ -58,20 +64,20 @@ const toggleModalAuth = function() {
          authButton.style.display = 'block';
          userName.style.display = 'none';
          buttonOut.style.display = 'none';
-
+         cartButton.style.display = 'none';
          buttonOut.removeEventListener('click', logOut)
 
          checkAuth();
      }
 
-     console.log('Authozired')
+     console.log('Authozired');
 
      userName.textContent = login;
 
      authButton.style.display = 'none';
      userName.style.display = 'inline';
-     buttonOut.style.display = 'block';
-
+     buttonOut.style.display = 'flex';
+     cartButton.style.display = 'flex';
 
      buttonOut.addEventListener('click', logOut)
  }
@@ -149,13 +155,13 @@ const toggleModalAuth = function() {
      cardsRestaurants.insertAdjacentHTML('afterbegin', card)
  }
 
-// createCardRestaurant();
+
 
 
 function createCardGood({ description, id, image, name, price }) {
     const card = document.createElement('div');
     card.className = 'card';
-
+    card.id = id;
     card.insertAdjacentHTML('afterbegin', `
                 <img src="${image}" alt="image" class="card-image">
                 <div class="card-text">
@@ -208,15 +214,106 @@ function openGoods(event) {
 }
 
 
+function addToCart() {
+    const target = event.target;
+
+    const buttonAddToCart = target.closest('.button-add-cart');
+    console.log(buttonAddToCart)
+
+    if (buttonAddToCart) {
+        const  card = target.closest('.card');
+        const title = card.querySelector('.card-title-reg').textContent;
+        const price = card.querySelector('.card-price-bold').textContent;
+        const id = card.id;
+
+        const food = cart.find(function (item) {
+            return item.id === id;
+        })
+        if (food) {
+            food.count += 1;
+        } else {
+            cart.push({
+                id,
+                title,
+                price,
+                count: 1
+            });
+        }
 
 
+        console.log(cart)
+    }
+}
+
+function renderCart() {
+    modalBody.textContent = '';
+    cart.forEach(function ({  id, title, price, count }) {
+        const itemCart = `
+         <div class="list-item">
+                <span>
+                    ${title}
+                </span>
+                    <div class="item-price-wrapper">
+                    <span class="item-price">
+                        ${price}
+                    </span>
+                        <div class="quantity">
+                            <span class="amount counter-minus" data-id=${id}>-</span>
+                            <span class="number">${count}</span>
+                            <span class="amount counter-plus" data-id=${id}>+</span>
+                        </div>
+                 </div>
+         </div>
+        `;
+        modalBody.insertAdjacentHTML('afterbegin', itemCart)
+    });
+    const totalPrice = cart.reduce(function (result , item) {
+        return result + (parseFloat(item.price) * item.count);
+    }, 0);
+    modalPrice.textContent = totalPrice;
+}
+
+
+function changeCount(e) {
+    const target = e.target;
+
+    if(target.classList.contains('amount')) {
+        const food = cart.find(function (item) {
+            return item.id === target.dataset.id;
+        });
+        if(target.classList.contains('counter-minus')) {
+            food.count--;
+            if(food.count === 0) {
+                cart.splice(cart.indexOf(food),1)
+            }
+        }
+
+        if(target.classList.contains('counter-plus')) {
+            food.count++;
+        }
+        renderCart();
+    }
+
+
+}
 
 function init() {
     getData('./db/partners.json').then(function (data) {
         data.forEach(createCardRestaurant)
     });
 
-    cartButton.addEventListener("click", toggleModal);
+    cartButton.addEventListener("click", function () {
+        renderCart();
+        toggleModal();
+    });
+
+
+    cancelBtn.addEventListener('click', function () {
+        cart.length = 0;
+        renderCart();
+    } )
+    modalBody.addEventListener('click', changeCount)
+    menu.addEventListener('click', addToCart);
     close.addEventListener("click", toggleModal);
     cardsRestaurants.addEventListener('click', openGoods);
     logo.forEach(function (f) {
