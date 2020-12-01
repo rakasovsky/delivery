@@ -583,6 +583,10 @@ footer {
     }
   }
 
+  .menu .card {
+    flex-basis: 49%;
+  }
+
   footer .wrapper .footer-left ul {
     flex-wrap: wrap;
     li {
@@ -600,6 +604,10 @@ footer {
     margin-top: 15px;
     flex: 1;
   }
+  .menu .card {
+    flex-basis: 99%;
+  }
+
 
   .promo-text {
     width: 100%;

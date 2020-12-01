@@ -41,4 +41,12 @@
     "price": 510,
     "image": "img/pizza-plus/pizza-classic.jpg"
   }
+,
+  {
+    "id": "pp06",
+    "name": "Пицца Хуй собачий",
+    "description": "Соус томатный, сыр «Моцарелла», сыр «Пармезан», ветчина, салями, грибы.",
+    "price": 510,
+    "image": "img/pizza-plus/pizza-classic.jpg"
+  }
 ]
